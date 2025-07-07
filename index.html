@@ -3,15 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
+    <title>ExploreWorld</title>
   </head>
   <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#hero" class="nav-logo">
+          <img src="imgs/logo.png" alt="ExploreWorld Logo" class="logo-img" />
+          <span>ExploreWorld</span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#plan-trip" class="nav-link">Plan Your Trip</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#footer" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
 
 
-    
-    <script src="js/script.js"></script>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Explore the World with Us</h1>
+        <p>
+          Your adventure begins here — discover amazing places and create
+          unforgettable memories.
+        </p>
+        <a href="#destinations" class="btn-primary">See Destinations</a>
+      </div>
+      <div class="hero-controls">
+        <button id="prevHero" aria-label="Previous image">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <button id="nextHero" aria-label="Next image">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Benefits start -->
+    <section class="benefits">
+      <div class="benefits__wrap">
+        <h2 class="benefits__title">Benefits of ExploreWorld</h2>
+        <div class="benefits__cards">
+          <div class="benefits__card">
+            <div class="benefits__card-pic">
+              <img
+                src="./imgs/globe.png"
+                alt="Welcome to Odigo!"
+                class="benefits__card-thumb"
+              />
+            </div>
+            <h3 class="benefits__card-title">
+              Your Gateway to Global Adventures
+            </h3>
+            <p class="benefits__card-desc">
+              Discover handpicked destinations, curated itineraries, and travel
+              tips to make every trip unforgettable.
+            </p>
+            <a href="#about" class="benefits__card-more"> LEARN MORE </a>
+          </div>
+          <div class="benefits__card">
+            <div class="benefits__card-pic">
+              <img
+                src="./imgs/compass.png"
+                alt="Your Personal Japan Guide"
+                class="benefits__card-thumb"
+              />
+            </div>
+            <h3 class="benefits__card-title">
+              Your Personalized Travel Assistant
+            </h3>
+            <p class="benefits__card-desc">
+              Plan trips tailored to your preferences with smart tools and
+              expert guidance at your fingertips.
+            </p>
+            <a href="#about" class="benefits__card-more"> LEARN MORE </a>
+          </div>
+          <div class="benefits__card">
+            <div class="benefits__card-pic">
+              <img
+                src="./imgs/house.png"
+                alt="Promoting Local Businesses"
+                class="benefits__card-thumb"
+              />
+            </div>
+            <h3 class="benefits__card-title">Support Local, Travel Better</h3>
+            <p class="benefits__card-desc">
+              Explore authentic experiences while supporting local businesses
+              and communities across the globe.
+            </p>
+            <a href="#about" class="benefits__card-more"> LEARN MORE </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Benefits end -->
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="destinations-section">
+      <h2 class="subtitle">Popular Destinations</h2>
+      <div class="destinations-container">
+        <!-- Cards loaded by JS -->
+      </div>
+    </section>
+
+
+    <!-- today's top places -->
+   <section id="plan-trip" class="plan-trip-section">
+  <h2 class="subtitle">Today's Top Places to Visit</h2>
+  <div class="top-places-flex">
+    <div class="place-card">
+      <img src="imgs/Colosseum.jpg" alt="Rome" />
+      <h3>Rome, Italy</h3>
+      <p>Explore ancient ruins and vibrant street life.</p>
+    </div>
+    <div class="place-card">
+      <img src="imgs/Cancun Beaches.avif" alt="Cancun" />
+      <h3>Cancún, Mexico</h3>
+      <p>Pristine white sand beaches and vibrant turquoise waters</p>
+    </div>
+    <div class="place-card">
+      <img src="imgs/Sagrada.webp" alt="Barcelona" />
+      <h3>Barcelona, Spain</h3>
+      <p>Marvel at Gaudí’s masterpiece and enjoy vibrant city life.</p>
+    </div>
+    <div class="place-card">
+      <img src="imgs/Eiffel.webp" alt="Paris" />
+      <h3>Paris, France</h3>
+      <p>Experience the magic of the Eiffel Tower and charming boulevards.</p>
+    </div>
+    <div class="place-card">
+      <img src="imgs/chiang Mai old City.jpg" alt="Chiang Mai" />
+      <h3>Chiang Mai, Thailand</h3>
+      <p>Explore ancient temples, vibrant markets, and mountain landscapes.</p>
+    </div>
+    <div class="place-card">
+      <img src="imgs/Alhambra.jpg" alt="Granada" />
+      <h3>Granada, Spain</h3>
+      <p>Marvel at the stunning Alhambra palace and rich Moorish history.</p>
+    </div>
+  </div>
+
+  <div class="plan-trip-button-container">
+    <a href="#" id="openTripModal" class="btn-primary">Plan Your Trip</a>
+  </div>
+</section>
+ 
+
+ 
+
+
+
+    <!-- form -->
+<div id="tripModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="subtitle">Plan Your Trip</h2>
+    <form id="trip-form" novalidate>
+      <!-- Your form inputs here -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" placeholder="Create a password" required />
+        <button type="button" id="toggle-password" aria-label="Show or hide password">Show</button>
+      </div>
+
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" name="destination" placeholder="Where do you want to go?" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Additional details (optional)"></textarea>
+
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+    <p id="form-message" class="form-message"></p>
+  </div>
+</div>
+
+
+
+<!-- about us: -->
+<!-- About Us Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <h2 class="section-title">About ExploreWorld</h2>
+    <p>
+  We are passionate travel enthusiasts dedicated to helping you discover the most stunning destinations around the world.  
+  Whether you're dreaming of peaceful mountain retreats or vibrant city adventures, we’ve got you covered.  
+  Our mission is to make planning your journey simple, inspiring, and unforgettable.  
+  <br><br>
+  With handpicked recommendations, hidden gems, and beautiful imagery, our platform makes it easy to fall in love with new places.  
+  We believe travel should be personal, exciting, and stress-free — and we’re building the tools to help make that happen.  
+  <br><br>
+  Soon, you'll be able to save favorite spots, build your dream itinerary, and even share your travel stories with others.  
+  Stay tuned — your next adventure starts here!
+</p>
+
+    <div class="about-features">
+      <div class="about-feature">
+        <i class="fas fa-globe-americas"></i>
+        <h3>Global Reach</h3>
+        <p>We cover destinations across all continents to match your wanderlust.</p>
+      </div>
+      <div class="about-feature">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>Tailored Experiences</h3>
+        <p>Plan trips with hand-picked recommendations and expert tools.</p>
+      </div>
+      <div class="about-feature">
+        <i class="fas fa-users"></i>
+        <h3>Community Focus</h3>
+        <p>Support local cultures and businesses while you travel the world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <footer id="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-logo-card">
+        <div class="logo-wrapper">
+          <img src="imgs/logo.png" alt="ExploreWorld Logo" />
+          <h2>ExploreWorld</h2>
+        </div>
+        <p>Discover. Explore. Experience.</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#plan-trip">Plan Your Trip</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: explore@world.com</p>
+      <p>Phone: +123 456 789</p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="footer-bottom">
+    <p>© 2025 ExploreWorld. All rights reserved.</p>
+  </div>
+</footer>
+
+    <div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your experience. By using our site, you agree to our use of cookies.</p>
+  <button id="acceptCookies">Accept</button>
+  </div>
+
+    <!-- Scripts -->
+    <button id="backToTop" title="Back to Top">&#8679;</button>
+    <script src="./js/script.js"></script>
   </body>
 </html>
