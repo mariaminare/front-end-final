@@ -1,0 +1,1100 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+/* smooth scrool */
+html {
+  scroll-behavior: smooth;
+}
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77px;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  flex-grow: 1;            /* This makes the nav-menu take remaining space */
+  justify-content: center; /* This centers the links within that space */
+}
+
+
+.nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #0077ff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0077ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #005bb5;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0077ff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.burger {
+  display: none;  /* hide burger icon on desktop by default */
+  cursor: pointer;
+}
+
+
+/* Normal scroll padding for fixed navbar */
+html {
+  scroll-padding-top: 77px;
+}
+
+
+/* navbar done */
+
+
+/* first section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+  z-index: 2;
+}
+
+.hero-controls button {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-controls button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-controls button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4); /* fallback */
+  z-index: 1;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #0077ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005dd1;
+}
+
+
+/* Benefits styles start */
+
+.benefits {
+  margin-top: 80px; /* pull it up into the hero section */
+  z-index: 10;
+  position: relative;
+  margin-bottom: 131px;
+}
+
+
+.benefits__wrap {
+  max-width: 1262px;
+  background-color: #fff;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  position: relative;
+}
+
+.benefits__title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background-color: #fff;
+  text-align: center; 
+}
+
+.benefits__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 55px;
+  padding: 0 100px;
+  align-items: stretch;
+}
+
+.benefits__card {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+  margin-bottom: 112px;
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+
+  
+}
+
+.benefits__card-pic {
+  max-width: 80px; /* bigger than 66px */
+  margin-bottom: 37px;
+  display: flex;           /* add flex for vertical centering */
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  margin-left: auto;       /* center container horizontally */
+  margin-right: auto;
+}
+.benefits__card-thumb {
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+  width: 100%;  /* fill the container */
+  height: auto; /* maintain aspect ratio */
+}
+
+.benefits__card-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 26px;
+  min-height: 60px; /* Make sure all titles take same height */
+}
+
+
+.benefits__card-desc {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 39px;
+}
+
+.benefits__card-more {
+  display: inline-block;
+  padding-right: 59px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #006dfe;
+  text-decoration: none;
+  background: url(../img/svg/arrow.svg) no-repeat 95% center;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.benefits__card-more:hover,
+.benefits__card-more:focus {
+  background: url(../img/svg/arrow.svg) no-repeat right center;
+}
+
+/* Benefits styles end */
+
+
+
+
+
+
+
+
+
+
+
+
+.destinations-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* .destinations-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+} */
+
+.destinations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.country-card {
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+}
+
+.country-flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.country-name {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.country-capital {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.places-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.place-item {
+  width: 100px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.place-item img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* popular places done */
+
+ /* form */
+form
+.plan-trip-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.plan-trip-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex-grow: 1;
+}
+
+#toggle-password {
+  background: none;
+  border: none;
+  color: #0077ff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 0.8rem;
+  user-select: none;
+}
+
+.btn-primary {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005dd1;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: red; 
+  }
+.form-message.success {
+  color: green;
+} 
+ /*form done  */
+ /* modal */
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 99999; /* Above everything else */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* dark background */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Disable scrolling when modal is open */
+.body-no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  /* preserve scroll position by setting top, see JS */
+}
+
+
+
+
+
+/* back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  background-color: #005dd1;
+}
+
+
+
+/* footer */
+footer {
+  background-color: #002b5c;
+  color: white;
+  padding: 3rem 1rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Logo and text side by side */
+.footer-logo-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 300px; /* increased width so slogan fits better */
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-logo-card img {
+  width: 55px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+.footer-logo-card h2 {
+  color: #00aaff;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.footer-logo-card p {
+  margin-top: 0.6rem;
+  font-weight: bold;
+  text-align: center; /* center slogan under the logo+title */
+}
+.footer-links h3,
+.footer-contact h3 {
+  color: #00aaff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.4rem 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Add hover effect on links for better UX */
+.footer-links a:hover {
+  color: #00aaff;
+  transition: color 0.3s ease;
+}
+
+.footer-contact p {
+  margin: 0.4rem 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons i {
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #00aaff;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+.plan-trip-section {
+  background: #f5f9ff;
+  padding: 4rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+.top-places-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 2rem; /* Optional: adds side breathing room */
+}
+
+.place-card {
+  background: white;
+  width: 600px; /* ✅ fixed size is good */
+  flex-shrink: 0; /* ✅ ensures it doesn't shrink too much on small screens */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+}
+
+.place-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.place-card h3 {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.place-card p {
+  font-size: 0.95rem;
+  padding: 0 1rem 1.2rem;
+  color: #444;
+}
+
+.plan-trip-button-container {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.plan-trip-button-container .btn-primary {
+  display: inline-block; /* shrink to content */
+  width: 370px;           /* no full width */
+  padding: 0.75rem 2.5rem; /* wider horizontal padding */
+  margin: 0;             /* reset margin if any */
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  background-color: #0077ff;
+  color: white;
+}
+
+.plan-trip-button-container .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* top picks section title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #0077ff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+
+
+
+
+/* about us */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 30px;
+}
+
+.about-feature {
+  flex: 1 1 250px;
+  background-color: #f4f6f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateY(-5px);
+}
+
+.about-feature i {
+  font-size: 2rem;
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+
+.about-feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0077ff;
+}
+
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #002b5c;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+.cookie-banner button {
+  background-color: #ffffff;
+  color: #002b5c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.cookie-banner button:hover {
+  background-color: #dce6f7;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* responsiiiiiiiiiiiiiveeeeeee */
+
+
+/* navabr responsive/burger */
+/* Responsive for header and nav */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;           /* Hide nav links by default */
+    position: absolute;
+    top: 77px;              /* Below navbar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+
+  .nav-menu.active {
+    display: flex;          /* Show nav links when active */
+  }
+
+  .burger {
+    display: block;         /* Show burger icon on small screens */
+  }
+
+  /* Optional: adjust logo and nav layout for small screens */
+  .navbar {
+    padding: 1rem;
+    position: fixed;
+  }
+}
+
+/* Extra small phones - up to 320px */
+@media (max-width: 320px) {
+  .place-card {
+    width: 100%; /* full width on tiny screens */
+    height: auto; /* auto height */
+  }
+  
+  .plan-trip-button-container .btn-primary {
+    width: 100%; /* full width button */
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-menu {
+    gap: 0.8rem;
+  }
+}
+
+/* Small phones - up to 480px */
+@media (max-width: 480px) {
+  .place-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits__cards {
+    grid-template-columns: 1fr; /* stack benefits cards vertically */
+    padding: 0 1rem;
+  }
+
+  .benefits__title {
+    padding: 2rem 1rem 1rem 1rem;
+    font-size: 1.8rem;
+  }
+
+  .plan-trip-section {
+    padding: 2rem 1rem;
+  }
+
+  .plan-trip-button-container .btn-primary {
+    width: 100%;
+  }
+}
+
+/* Tablets up to 768px */
+@media (max-width: 768px) {
+  /* you already have nav-menu toggle */
+  
+  .benefits__cards {
+    grid-template-columns: 1fr 1fr; /* 2 columns for benefits */
+    padding: 0 2rem;
+  }
+
+  .place-card {
+    width: 100%;
+  }
+
+  .plan-trip-section {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Small laptops and tablets - up to 1024px */
+@media (max-width: 1024px) {
+  .benefits__cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 3rem;
+  }
+
+  .plan-trip-section {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+/* benefits responsive */
+/* Benefits section responsive tweaks */
+
+/* 1024px - reduce padding on cards container and title */
+@media (max-width: 1024px) {
+  .benefits__cards {
+    padding: 0 40px;
+    column-gap: 40px;
+  }
+  .benefits__title {
+    padding: 60px 40px 40px 40px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+/* 768px - switch to 2 columns */
+@media (max-width: 768px) {
+  .benefits__cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    column-gap: 30px;
+  }
+  .benefits__title {
+    padding: 50px 20px 30px 20px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+/* 480px - single column, title relative */
+@media (max-width: 480px) {
+  .benefits__cards {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    row-gap: 40px; /* spacing between stacked cards */
+  }
+  .benefits__title {
+    position: relative !important;
+    transform: none !important;
+    padding: 30px 15px 20px 15px;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  .benefits__card {
+    margin-bottom: 0; /* grid row-gap handles spacing */
+  }
+
+  .benefits__card-pic {
+    max-width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .benefits__card-title {
+    font-size: 1.1rem;
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+
+  .benefits__card-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .benefits__card-more {
+    padding-right: 40px;
+    font-size: 14px;
+    background-position: 90% center;
+  }
+}
+
+/* 320px - smallest phones, minor size reductions */
+@media (max-width: 320px) {
+  .benefits__title {
+    font-size: 20px;
+    padding: 20px 10px 15px 10px;
+  }
+  .benefits__card-pic {
+    max-width: 50px;
+  }
+  .benefits__card-title {
+    font-size: 1rem;
+  }
+  .benefits__card-desc {
+    font-size: 0.9rem;
+  }
+  .benefits__card-more {
+    font-size: 13px;
+    padding-right: 30px;
+  }
+}
