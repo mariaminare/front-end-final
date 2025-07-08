@@ -21,7 +21,7 @@ const popularPlaces = {
   ],
   Spain: [
     { name: 'Sagrada Familia', img: 'imgs/Sagrada.webp' },
-    { name: 'Alhambra', img: 'imgs/alhambra.jpg' },
+    { name: 'Alhambra', img: 'imgs/Alhambra.jpg' },
     { name: 'Park Güell', img: 'imgs/Guell.webp' }
   ],
   Switzerland: [
@@ -32,7 +32,7 @@ const popularPlaces = {
   Thailand: [
     { name: 'Phi Phi Islands', img: 'imgs/phi Phi islands.jpg' },
     { name: 'Grand Palace', img: 'imgs/grand palace.jpg' },
-    { name: 'Chiang Mai Old City', img: 'imgs/Chiang Mai old City.jpg' }
+    { name: 'Chiang Mai Old City', img: 'imgs/chiang Mai old City.jpg' }
   ],
   Brazil: [
     { name: 'Christ the Redeemer', img: 'imgs/Christ.jpg' },
