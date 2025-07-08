@@ -32,7 +32,7 @@ const popularPlaces = {
   Thailand: [
     { name: 'Phi Phi Islands', img: 'imgs/phi Phi islands.jpg' },
     { name: 'Grand Palace', img: 'imgs/grand palace.jpg' },
-    { name: 'Chiang Mai Old City', img: 'imgs/Chiang Mai old City.jpg' }
+    { name: 'Chiang Mai Old City', img: 'imgs/chiangMaioldCity.jpg' }
   ],
   Brazil: [
     { name: 'Christ the Redeemer', img: 'imgs/Christ.jpg' },
