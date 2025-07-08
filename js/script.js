@@ -32,7 +32,7 @@ const popularPlaces = {
   Thailand: [
     { name: 'Phi Phi Islands', img: 'imgs/phi Phi islands.jpg' },
     { name: 'Grand Palace', img: 'imgs/grand palace.jpg' },
-    { name: 'Chiang Mai Old City', img: 'imgs/chiang Mai old City.jpg' }
+    { name: 'Chiang Mai Old City', img: 'imgs/Chiang Mai old City.jpg' }
   ],
   Brazil: [
     { name: 'Christ the Redeemer', img: 'imgs/Christ.jpg' },
@@ -347,17 +347,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Cookie banner handling
-  const cookieBanner = document.getElementById('cookieBanner');
-  const acceptCookiesBtn = document.getElementById('acceptCookies');
+  
 
-  if (!localStorage.getItem('cookiesAccepted')) {
-    cookieBanner.style.display = 'flex';
-  }
+ const cookieBanner = document.getElementById('cookieBanner');
+ const acceptCookiesBtn = document.getElementById('acceptCookies');
 
-  acceptCookiesBtn.addEventListener('click', () => {
-    localStorage.setItem('cookiesAccepted', 'true');
-    cookieBanner.style.display = 'none';
-  });
+ if (!localStorage.getItem('cookiesAccepted')) {
+ cookieBanner.style.display = 'flex';
+ document.body.classList.add('cookies-visible');
+ } else {
+ cookieBanner.style.display = 'none';
+ document.body.classList.remove('cookies-visible');
+ }
+
+ acceptCookiesBtn.addEventListener('click', () => {
+ localStorage.setItem('cookiesAccepted', 'true');
+ cookieBanner.style.display = 'none';
+ document.body.classList.remove('cookies-visible');
+ });
 });
-
-
